@@ -1,0 +1,90 @@
+/* Modal Styles */
+.modal {
+    display: block;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #2E3440;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #D8DEE9;
+    font-family: 'Arial', sans-serif;
+}
+
+.modal-content {
+    background: #3B4252;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.modal h1 {
+    color: #88C0D0;
+}
+
+#scrapedContent {
+    width: 100%;
+    background: #4C566A;
+    border: none;
+    color: #D8DEE9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.chat-area {
+    background: #2E3440;
+    padding: 10px;
+    border-radius: 4px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.user-input {
+    width: 80%;
+    background: #4C566A;
+    border: none;
+    color: #D8DEE9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background: #81A1C1;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #88C0D0;
+}
+
+.user-message {
+    text-align: right;
+    background-color: #A3BE8C;
+    color: #2E3440;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.ai-message {
+    text-align: left;
+    background-color: #BF616A;
+    color: #ECEFF4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
