@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const { link, text, userMessage } = request.content;
 
         // Set the API key
-        const API_KEY = "your-api-key-here";
+        const API_KEY = "";
 
         // Set headers
         const headers = {
@@ -49,6 +49,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 sendResponse({ error: 'Error communicating with AI API' });
             });
 
-        return true; // Keep the message channel open for asynchronous response
+        return true;
     }
 });
