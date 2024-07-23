@@ -150,8 +150,8 @@ function sendContentToAI() {
         const userMessage = document.createElement('div');
         userMessage.className = 'user-message';
         userMessage.innerText = userInput;
-        userMessage.style.backgroundColor = '#5E81AC'; // Nord blue color for user message
-        userMessage.style.color = '#ECEFF4'; // Light color for text
+        userMessage.style.backgroundColor = '#5E81AC';
+        userMessage.style.color = '#ECEFF4';
         userMessage.style.padding = '10px';
         userMessage.style.margin = '5px 0';
         userMessage.style.borderRadius = '4px';
@@ -160,8 +160,8 @@ function sendContentToAI() {
         // AI response message
         const aiMessage = document.createElement('div');
         aiMessage.className = 'ai-message';
-        aiMessage.style.backgroundColor = '#4C566A'; // Darker Nord color for AI message
-        aiMessage.style.color = '#ECEFF4'; // Light color for text
+        aiMessage.style.backgroundColor = '#4C566A';
+        aiMessage.style.color = '#ECEFF4';
         aiMessage.style.padding = '10px';
         aiMessage.style.margin = '5px 0';
         aiMessage.style.borderRadius = '4px';
@@ -204,7 +204,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         setTimeout(() => {
             injectModal();
             scrapeContent();
-        }, 1000);  // Delay to allow content to fully load
+        }, 1000);
     }
 });
 
@@ -214,7 +214,7 @@ if (localStorage.getItem('showModalAfterReload') === 'true') {
     setTimeout(() => {
         injectModal();
         scrapeContent();
-    }, 1000);  // Delay to allow content to fully load
+    }, 1000);
 }
 
 // Listen for the key combination Ctrl+Shift+U to refresh the page
