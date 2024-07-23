@@ -160,8 +160,8 @@ function sendContentToAI() {
         // AI response message
         const aiMessage = document.createElement('div');
         aiMessage.className = 'ai-message';
-        aiMessage.style.backgroundColor = '#4C566A';
-        aiMessage.style.color = '#ECEFF4';
+        aiMessage.style.backgroundColor = '#4C566A'; // Darker Nord color for AI message
+        aiMessage.style.color = '#ECEFF4'; // Light color for text
         aiMessage.style.padding = '10px';
         aiMessage.style.margin = '5px 0';
         aiMessage.style.borderRadius = '4px';
@@ -212,22 +212,12 @@ if (localStorage.getItem('showModalAfterReload') === 'true') {
     setTimeout(() => {
         injectModal();
         scrapeContent();
-    }, 1000);
+    }, 1000);  // Delay to allow content to fully load
 }
 
 // Listen for the key combination Ctrl+Shift+U to refresh the page
 document.addEventListener('keydown', function(event) {
-    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-    const isCommandKey = isMac ? event.metaKey : event.ctrlKey;
-
-    if (isCommandKey && event.shiftKey && event.key === 'U') {
-        reloadPage();
-    }
-});document.addEventListener('keydown', function(event) {
-    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-    const isCommandKey = isMac ? event.metaKey : event.ctrlKey;
-
-    if (isCommandKey && event.shiftKey && event.key === 'U') {
+    if (event.ctrlKey && event.shiftKey && event.key === 'U') {
         reloadPage();
     }
 });

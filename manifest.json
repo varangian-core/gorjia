@@ -29,8 +29,7 @@
   "commands": {
     "open-search": {
       "suggested_key": {
-        "default": "Ctrl+Shift+U",
-        "mac": "Command+Shift+U"
+        "default": "Ctrl+Shift+U"
       },
       "description": "Activate search popup"
     }
