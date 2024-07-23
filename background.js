@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const { link, text, userMessage } = request.content;
 
         // Set the API key
-        const API_KEY = "your-key-here";
+        const API_KEY = "your-api-key-here";
 
         // Set headers
         const headers = {

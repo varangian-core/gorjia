@@ -150,8 +150,8 @@ function sendContentToAI() {
         const userMessage = document.createElement('div');
         userMessage.className = 'user-message';
         userMessage.innerText = userInput;
-        userMessage.style.backgroundColor = '#5E81AC'; // Nord blue color for user message
-        userMessage.style.color = '#ECEFF4'; // Light color for text
+        userMessage.style.backgroundColor = '#5E81AC';
+        userMessage.style.color = '#ECEFF4';
         userMessage.style.padding = '10px';
         userMessage.style.margin = '5px 0';
         userMessage.style.borderRadius = '4px';
@@ -184,9 +184,7 @@ function sendContentToAI() {
         // Scroll to the bottom of the chat area
         chatArea.scrollTop = chatArea.scrollHeight;
 
-        // Clear the input field
         document.getElementById('userInput').value = '';
-        // Reset word count for input
         updateWordCount();
     });
 }
@@ -204,7 +202,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         setTimeout(() => {
             injectModal();
             scrapeContent();
-        }, 1000);  // Delay to allow content to fully load
+        }, 1000);
     }
 });
 
@@ -219,7 +217,17 @@ if (localStorage.getItem('showModalAfterReload') === 'true') {
 
 // Listen for the key combination Ctrl+Shift+U to refresh the page
 document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.shiftKey && event.key === 'U') {
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    const isCommandKey = isMac ? event.metaKey : event.ctrlKey;
+
+    if (isCommandKey && event.shiftKey && event.key === 'U') {
+        reloadPage();
+    }
+});document.addEventListener('keydown', function(event) {
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    const isCommandKey = isMac ? event.metaKey : event.ctrlKey;
+
+    if (isCommandKey && event.shiftKey && event.key === 'U') {
         reloadPage();
     }
 });

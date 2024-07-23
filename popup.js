@@ -12,6 +12,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function performSearch(query) {
         console.log('Searching for:', query);
-        // Implement your search logic here
     }
 });

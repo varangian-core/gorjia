@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Gojira Helpline",
   "version": "1.0",
-  "description": "Open a search popup on double Shift press and scrape content.",
+  "description": "Gojira helper",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
