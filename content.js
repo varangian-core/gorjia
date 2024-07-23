@@ -160,8 +160,8 @@ function sendContentToAI() {
         // AI response message
         const aiMessage = document.createElement('div');
         aiMessage.className = 'ai-message';
-        aiMessage.style.backgroundColor = '#4C566A'; // Darker Nord color for AI message
-        aiMessage.style.color = '#ECEFF4'; // Light color for text
+        aiMessage.style.backgroundColor = '#4C566A';
+        aiMessage.style.color = '#ECEFF4';
         aiMessage.style.padding = '10px';
         aiMessage.style.margin = '5px 0';
         aiMessage.style.borderRadius = '4px';
@@ -212,7 +212,7 @@ if (localStorage.getItem('showModalAfterReload') === 'true') {
     setTimeout(() => {
         injectModal();
         scrapeContent();
-    }, 1000);  // Delay to allow content to fully load
+    }, 1000);
 }
 
 // Listen for the key combination Ctrl+Shift+U to refresh the page
